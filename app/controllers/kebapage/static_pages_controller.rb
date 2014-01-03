@@ -24,7 +24,7 @@ module Kebapage
       @static_page = StaticPage.new(static_page_params)
 
       if @static_page.save
-        redirect_to @static_page
+        redirect_to main_app.pages_path(@static_page)
       else
         render action: 'new'
       end
