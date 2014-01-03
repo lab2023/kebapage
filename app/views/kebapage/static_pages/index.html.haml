@@ -21,7 +21,7 @@
           %td
             = truncate static_page.content, length: 25
           %td.action
-            %a.btn.btn-success{href: static_page_path(static_page), data: { toggle: 'tooltip'}, title: 'Zoom'}
+            %a.btn.btn-success{href: main_app.pages_path(static_page), data: { toggle: 'tooltip'}, title: 'Zoom'}
               %i.icon-zoom-in
             %a.btn.btn-info{href: edit_static_page_path(static_page)}
               %i.icon-edit
