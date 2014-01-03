@@ -1,24 +1,33 @@
-%h1 Listing static_pages
-%table
-  %thead
-    %tr
-      %th Title
-      %th Content
-      %th
-      %th
-      %th
-  %tbody
-    - @static_pages.each do |static_page|
+=stylesheet_link_tag 'stylesheets/application'
+
+.panel.panel-default.grid
+  .panel-heading
+    %i.icon-table.icon-large
+    Static Pages
+
+  %table.table
+    %thead
       %tr
-        %td
-          = static_page.title
-        %td
-          = static_page.content
-        %td
-          = link_to 'Show', static_page
-        %td
-          = link_to 'Edit', edit_static_page_path(static_page)
-        %td
-          = link_to 'Destroy', static_page, method: :delete, data: { confirm: 'Are you sure?' }
+        %th #
+        %th Title
+        %th Content
+        %th.actions
+          Action
+    %tbody.success
+      - @static_pages.each do |static_page|
+        %tr
+          %td
+            = static_page.id
+          %td
+            = static_page.title
+          %td
+            = static_page.content
+          %td.action
+            %a.btn.btn-success{href: static_page_path(static_page), data: { toggle: 'tooltip'}, title: 'Zoom'}
+              %i.icon-zoom-in
+            %a.btn.btn-info{href: edit_static_page_path(static_page)}
+              %i.icon-edit
+            = link_to static_page_path(static_page), method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-danger' do
+              %i.icon-trash
 
 = link_to 'New Static Page', new_static_page_path
