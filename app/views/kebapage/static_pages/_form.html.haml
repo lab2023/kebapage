@@ -6,13 +6,13 @@
 
     =form_for @static_page do |f|
       .form-group
-        = f.label :title, class: 'label control-label'
-        = f.text_field :title, class: 'input form-control', placeholder: 'Page title'
+        = f.label I18n.t('kebapage.title'), class: 'control-label'
+        = f.text_field :title, class: 'form-control', placeholder: I18n.t('kebapage.title_placeholder')
 
       .form-group
-        = f.label :content, class: 'label control-label'
-        = f.text_area :content, class: 'textarea form-control', placeholder: 'Content', rows: 4
+        = f.label I18n.t('kebapage.content'), class: 'control-label'
+        = f.text_area :content, class: 'form-control', placeholder: I18n.t('kebapage.content_placeholder'), rows: 4
 
       .form-actions
-        %button.btn.btn-default{type: 'submit'} Submit
-        %a.btn{href: static_pages_path} Cancel
+        %button.btn.btn-default{type: 'submit'} #{I18n.t('kebapage.submit')}
+        %a.btn{href: static_pages_path} #{I18n.t('kebapage.cancel')}

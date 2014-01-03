@@ -1,16 +1,16 @@
 .panel.panel-default.grid
   .panel-heading
     %i.icon-table.icon-large
-    Static Pages
+    #{I18n.t('kebapage.static_pages')}
 
   %table.table
     %thead
       %tr
         %th #
-        %th Title
-        %th Content
+        %th #{I18n.t('kebapage.title')}
+        %th #{I18n.t('kebapage.content')}
         %th.actions
-          Action
+          #{I18n.t('kebapage.action')}
     %tbody.success
       - @static_pages.each do |static_page|
         %tr
@@ -21,11 +21,11 @@
           %td
             = truncate static_page.content, length: 25
           %td.action
-            %a.btn.btn-success{href: main_app.pages_path(static_page), data: { toggle: 'tooltip'}, title: 'Zoom'}
+            %a.btn.btn-success{href: main_app.pages_path(static_page), data: { toggle: 'tooltip'}, title: I18n.t('kebapage.show')}
               %i.icon-zoom-in
             %a.btn.btn-info{href: edit_static_page_path(static_page)}
               %i.icon-edit
-            = link_to static_page_path(static_page), method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-danger' do
+            = link_to static_page_path(static_page), method: :delete, data: { confirm: I18n.t('kebapage.ru_sure')}, class: 'btn btn-danger' do
               %i.icon-trash
 
-= link_to 'New Static Page', new_static_page_path, method: :get, class: 'btn btn-default'
+= link_to I18n.t('kebapage.new_page'), new_static_page_path, method: :get, class: 'btn btn-default'

@@ -24,7 +24,7 @@ module Kebapage
       @static_page = StaticPage.new(static_page_params)
 
       if @static_page.save
-        redirect_to @static_page, notice: 'Static page was successfully created.'
+        redirect_to @static_page
       else
         render action: 'new'
       end
@@ -32,7 +32,7 @@ module Kebapage
 
     def update
       if @static_page.update(static_page_params)
-        redirect_to @static_page, notice: 'Static page was successfully updated.'
+        redirect_to @static_page
       else
         render action: 'edit'
       end
@@ -40,7 +40,7 @@ module Kebapage
 
     def destroy
       @static_page.destroy
-      redirect_to static_pages_url, notice: 'Static page was successfully destroyed.'
+      redirect_to static_pages_url
     end
 
     private
