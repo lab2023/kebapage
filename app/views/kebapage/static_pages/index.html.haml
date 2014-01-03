@@ -1,5 +1,3 @@
-=stylesheet_link_tag 'stylesheets/application'
-
 .panel.panel-default.grid
   .panel-heading
     %i.icon-table.icon-large
@@ -17,11 +15,11 @@
       - @static_pages.each do |static_page|
         %tr
           %td
-            = static_page.id
+            = (@static_pages.index static_page) + 1
           %td
             = static_page.title
           %td
-            = static_page.content
+            = truncate static_page.content, length: 25
           %td.action
             %a.btn.btn-success{href: static_page_path(static_page), data: { toggle: 'tooltip'}, title: 'Zoom'}
               %i.icon-zoom-in
@@ -30,4 +28,4 @@
             = link_to static_page_path(static_page), method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-danger' do
               %i.icon-trash
 
-= link_to 'New Static Page', new_static_page_path
+= link_to 'New Static Page', new_static_page_path, method: :get, class: 'btn btn-default'

@@ -1,13 +1,18 @@
-= form_for @static_page do |f|
-  .field
-    = f.label :title
-    %br
-    = f.text_field :title
+.panel.panel-default
+  .panel-heading
+    %i.icon-edit.icon-large
+    Form
+  .panel-body
 
-  .field
-    = f.label :content
-    %br
-    = f.text_field :content
+    =form_for @static_page do |f|
+      .form-group
+        = f.label :title, class: 'label control-label'
+        = f.text_field :title, class: 'input form-control', placeholder: 'Page title'
 
-  .actions
-    = f.submit
+      .form-group
+        = f.label :content, class: 'label control-label'
+        = f.text_area :content, class: 'textarea form-control', placeholder: 'Content', rows: 4
+
+      .form-actions
+        %button.btn.btn-default{type: 'submit'} Submit
+        %a.btn{href: static_pages_path} Cancel
