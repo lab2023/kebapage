@@ -3,12 +3,14 @@ require_dependency "kebapage/application_controller"
 module Kebapage
   class StaticPagesController < ApplicationController
     before_action :set_static_page, only: [:show, :edit, :update, :destroy]
+    skip_before_filter :authenticate_admin!, only: [:show]
 
     def index
       @static_pages = StaticPage.all
     end
 
     def show
+      render layout: 'layouts/application'
     end
 
     def new
