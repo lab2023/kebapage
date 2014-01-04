@@ -24,7 +24,7 @@ module Kebapage
       @static_page = StaticPage.new(static_page_params)
 
       if @static_page.save
-        redirect_to main_app.pages_path(@static_page)
+        redirect_to root_url
       else
         render action: 'new'
       end
@@ -32,7 +32,7 @@ module Kebapage
 
     def update
       if @static_page.update(static_page_params)
-        redirect_to @static_page
+        redirect_to root_url
       else
         render action: 'edit'
       end
