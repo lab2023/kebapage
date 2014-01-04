@@ -13,4 +13,5 @@
  *= require_tree .
  */
 
-@import "bootstrap";
+@import 'hierapolis';
+@import "bootstrap-wysihtml5/core-b3";
