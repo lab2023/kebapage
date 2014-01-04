@@ -45,7 +45,7 @@ module Kebapage
 
     private
       def set_static_page
-        @static_page = StaticPage.find(params[:id])
+        @static_page = StaticPage.friendly.find(params[:id])
       end
 
       def static_page_params
