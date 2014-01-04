@@ -10,7 +10,11 @@ module Kebapage
     end
 
     def show
-      render layout: 'layouts/application'
+      if request.path != main_app.pages_path(@static_page)
+        redirect_to main_app.pages_path(@static_page), status: :moved_permanently
+      else
+        render layout: 'layouts/application'
+      end
     end
 
     def new
