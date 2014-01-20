@@ -10,7 +10,41 @@ Before mounting Kebapage to your application, you will need:
 
 ## Installing Kebapage to Cybele Rails applications
 
-TODO: Documentation here.
+Add the engine to your Gemfile:
+
+```ruby
+gem 'kebapage'
+```
+
+Bundle install:
+
+```
+bundle install
+```
+
+Make the installation:
+
+```
+rails g kebapage:install
+```
+
+Run migrations:
+
+```
+rake db:migrate
+```
+
+Mount the engine under HQ namespace and add extra routes in config/routes.rb file:
+
+```ruby
+namespace :hq do
+  mount Kebapage::Engine => '/mount_point' # Example: '/spm'
+end
+
+get '/id', to: 'kebapage/static_pages#show', as: 'pages'
+```
+
+Add blog icon-link to Cybele Rails application's **app/views/layouts/hq/partials/_dock.haml** file. For an example, checkout **example.haml** file.
 
 ## Bugs and Feedback
 
