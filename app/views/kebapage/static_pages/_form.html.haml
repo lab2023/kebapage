@@ -1,3 +1,5 @@
+=stylesheet_link_tag "kebapage/application"
+
 .panel.panel-default
   .panel-heading
     %i.icon-edit.icon-large
@@ -11,8 +13,35 @@
 
       .form-group
         = f.label I18n.t('kebapage.content'), class: 'control-label'
-        = f.text_area :content, class: 'form-control', placeholder: I18n.t('kebapage.content_placeholder'), rows: 4
+        = f.text_area :content, class: 'form-control wysihtml5', placeholder: I18n.t('kebapage.content_placeholder'), rows: 15
 
       .form-actions
         %button.btn.btn-default{type: 'submit'} #{I18n.t('kebapage.submit')}
         %a.btn{href: static_pages_path} #{I18n.t('kebapage.cancel')}
+
+    =form_for @photo, multipart: true, html: { class: :dropzone, id: 'photo-dropzone' } do |f|
+      =f.hidden_field :photo
+
+=javascript_include_tag "kebapage/application"
+:javascript
+  Dropzone.options.photoDropzone = {
+      paramName: "photo",
+      maxFilesize: 2,
+      clickable: true,
+      addRemoveLinks: true,
+      init: function () {
+          this.on("complete", function (file) {
+              return $.ajax({
+                  url: "#{photos_photos_url(format: :js)}"
+              });
+          });
+          return this.on('removedfile', function(file) {
+            if (file.xhr) {
+              return $.ajax({
+                url: "" + ($("#photo-dropzone").attr("action")) + "/" + (JSON.parse(file.xhr.response).id),
+                type: 'DELETE'
+              });
+            }
+          });
+      }
+  };

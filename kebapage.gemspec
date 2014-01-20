@@ -21,6 +21,9 @@ Gem::Specification.new do |s|
   s.add_dependency "i18n", "~> 0.6.9"
   s.add_dependency "haml-rails"
   s.add_dependency "friendly_id"
+  s.add_dependency "bootstrap-sass"
+  s.add_dependency "bootstrap-wysihtml5-rails"
+  s.add_dependency "dropzonejs-rails", "0.4.12"
 
   s.add_development_dependency "sqlite3"
 end

@@ -8,7 +8,6 @@
       %tr
         %th #
         %th #{I18n.t('kebapage.title')}
-        %th #{I18n.t('kebapage.content')}
         %th.actions
           #{I18n.t('kebapage.action')}
     %tbody.success
@@ -18,8 +17,6 @@
             = (@static_pages.index static_page) + 1
           %td
             = static_page.title
-          %td
-            = truncate static_page.content, length: 25
           %td.action
             %a.btn.btn-success{href: main_app.pages_path(static_page), data: { toggle: 'tooltip'}, title: I18n.t('kebapage.show')}
               %i.icon-zoom-in
@@ -28,4 +25,4 @@
             = link_to static_page_path(static_page), method: :delete, data: { confirm: I18n.t('kebapage.ru_sure')}, class: 'btn btn-danger' do
               %i.icon-trash
 
-= link_to I18n.t('kebapage.new_page'), new_static_page_path, method: :get, class: 'btn btn-default'
+= link_to I18n.t('kebapage.new_page'), new_static_page_path, method: :get, class: 'btn btn-default btn-success'

@@ -1,7 +1,2 @@
 %p
-  %strong Title:
-  = @static_page.title
-
-%p
-  %strong Content:
-  = @static_page.content
+  = @static_page.content.html_safe
