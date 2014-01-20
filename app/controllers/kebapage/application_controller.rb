@@ -1,6 +1,6 @@
 module Kebapage
   class ApplicationController < ActionController::Base
     before_filter :authenticate_admin!
-    layout 'layouts/hq/application'
+    layout Rails.configuration.kebapage.admin_layout
   end
 end
