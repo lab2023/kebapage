@@ -19,9 +19,11 @@ module Kebapage
 
     def new
       @static_page = StaticPage.new
+      @photo = Photo.new
     end
 
     def edit
+      @photo = Photo.new
     end
 
     def create

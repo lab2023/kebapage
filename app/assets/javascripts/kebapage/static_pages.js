@@ -2,7 +2,7 @@
 // All this logic will automatically be available in application.js.
 
 $('.wysihtml5').each(function(i, elem) {
-  $(elem).wysihtml5();
+  document.wysi = $(elem).wysihtml5();
 });
 
 $(document).on('page:load', function(){

@@ -1,0 +1,3 @@
+<% @uploads.each do |photo| %>
+  document.wysi.data("wysihtml5").editor.composer.setValue($('#static_page_content').val() + "<img src='<%= photo.photo.url %>' />");
+<% end %>
