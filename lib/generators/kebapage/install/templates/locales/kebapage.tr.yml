@@ -1,0 +1,17 @@
+tr:
+  kebapage:
+    new_page: 'Yeni statik sayfa'
+    edit_page: 'Statik sayfa düzenleniyor'
+    list_page: 'Statik sayfa listesi'
+    static_pages: 'Statik sayfalar'
+    show: 'Göster'
+    edit: 'Düzenle'
+    destroy: 'Kaldır'
+    ru_sure: 'Emin misiniz?'
+    title: 'Başlık'
+    content: 'İçerik'
+    title_placeholder: "Sayfanızın başlığı"
+    content_placeholder: "Sayfanızın içeriği"
+    action: 'Eylemler'
+    submit: 'Gönder'
+    cancel: 'Vazgeç'

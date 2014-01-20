@@ -1,0 +1,17 @@
+en:
+  kebapage:
+    new_page: 'New static page'
+    edit_page: 'Editing static page'
+    list_page: 'Listing static pages'
+    static_pages: 'Static Pages'
+    show: 'Show'
+    edit: 'Edit'
+    destroy: 'Destroy'
+    ru_sure: 'Are you sure?'
+    title: 'Title'
+    content: 'Content'
+    title_placeholder: "Type your page's title"
+    content_placeholder: "Type yours page's content"
+    action: 'Action'
+    submit: 'Submit'
+    cancel: 'Cancel'
