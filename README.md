@@ -41,7 +41,7 @@ namespace :hq do
   mount Kebapage::Engine => '/mount_point' # Example: '/spm'
 end
 
-get '/id', to: 'kebapage/static_pages#show', as: 'pages'
+get '/:id', to: 'kebapage/static_pages#show', as: 'pages'
 ```
 
 Add blog icon-link to Cybele Rails application's **app/views/layouts/hq/partials/_dock.haml** file. For an example, checkout **example.haml** file.

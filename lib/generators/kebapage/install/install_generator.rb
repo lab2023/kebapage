@@ -12,6 +12,7 @@ module Kebapage
       desc 'Copies Kebapage views, migrations and locales.'
 
       def copy_views
+        directory 'views', 'app/views'
       end
 
       def self.next_migration_number(dirname)
