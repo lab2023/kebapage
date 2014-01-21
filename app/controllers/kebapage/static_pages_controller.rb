@@ -1,4 +1,4 @@
-require_dependency "kebapage/application_controller"
+require_dependency 'kebapage/application_controller'
 
 module Kebapage
   class StaticPagesController < ApplicationController

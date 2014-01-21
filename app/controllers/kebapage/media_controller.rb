@@ -1,10 +1,10 @@
-require_dependency "kebapage/application_controller"
+require_dependency 'kebapage/application_controller'
 
 module Kebapage
   class MediaController < ApplicationController
 
     def index
-      @media = Medium.all
+      @media = Medium.order('attachment_updated_at DESC')
       @medium = Medium.new
     end
 

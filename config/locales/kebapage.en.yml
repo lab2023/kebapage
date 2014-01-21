@@ -15,3 +15,7 @@ en:
     action: 'Action'
     submit: 'Submit'
     cancel: 'Cancel'
+    media_manager: 'Media Manager'
+    file_type: 'File Type'
+    file_size: 'File Size'
+    upload_date: 'Upload Date'

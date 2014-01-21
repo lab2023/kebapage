@@ -11,17 +11,17 @@
 .panel.panel-default.grid
   .panel-heading
     %i.icon-table.icon-large
-    Media Manager Index Page
+    #{I18n.t('kebapage.media_manager')}
 
   %table.table
     %thead
       %tr
         %th #
-        %th Filetype
-        %th File size
-        %th Upload date
+        %th #{I18n.t('kebapage.file_type')}
+        %th #{I18n.t('kebapage.file_size')}
+        %th #{I18n.t('kebapage.upload_date')}
         %th.actions
-          Actions
+          #{I18n.t('kebapage.action')}
 
     %t.body.success
       - @media.each do |media|
@@ -33,7 +33,7 @@
           %td
             = "#{(media.attachment_file_size.to_i / 1024)} KB"
           %td
-            = media.attachment_updated_at
+            = media.attachment_updated_at.to_date
           %td.action
             %a.btn.btn-success{href: media.attachment.url }
               %i.icon-zoom-in
