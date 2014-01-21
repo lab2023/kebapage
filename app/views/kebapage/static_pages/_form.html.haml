@@ -19,26 +19,21 @@
         %button.btn.btn-default{type: 'submit'} #{I18n.t('kebapage.submit')}
         %a.btn{href: static_pages_path} #{I18n.t('kebapage.cancel')}
 
-    =form_for @photo, multipart: true, html: { class: :dropzone, id: 'photo-dropzone' } do |f|
-      =f.hidden_field :photo
+    =form_for @medium, multipart: true, html: { class: :dropzone, id: 'media-dropzone' } do |f|
+      =f.hidden_field :attachment
 
 =javascript_include_tag "kebapage/application"
 :javascript
   Dropzone.options.photoDropzone = {
-      paramName: "photo",
+      paramName: "attachment",
       maxFilesize: 2,
       clickable: true,
       addRemoveLinks: true,
       init: function () {
-          this.on("complete", function (file) {
-              return $.ajax({
-                  url: "#{photos_photos_url(format: :js)}"
-              });
-          });
           return this.on('removedfile', function(file) {
             if (file.xhr) {
               return $.ajax({
-                url: "" + ($("#photo-dropzone").attr("action")) + "/" + (JSON.parse(file.xhr.response).id),
+                url: "" + ($("#media-dropzone").attr("action")) + "/" + (JSON.parse(file.xhr.response).id),
                 type: 'DELETE'
               });
             }

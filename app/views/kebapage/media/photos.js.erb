@@ -1,0 +1,3 @@
+<% @uploads.each do |photo| %>
+  document.wysi.data("wysihtml5").editor.composer.setValue(document.wysi.val() + '<img src="<%= URI.join(request.url, photo.attachment.url) %>" />');
+<% end %>

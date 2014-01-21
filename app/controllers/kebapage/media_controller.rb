@@ -1,20 +1,21 @@
 require_dependency "kebapage/application_controller"
 
 module Kebapage
-  class PhotosController < ApplicationController
+  class MediaController < ApplicationController
     def create
-      @photo = Photo.create(photo: params[:photo])
-      render json: @photo
+      @medium = Medium.create(attachment: params[:attachment ])
+      puts #{params[:attachment]}
+      render json: @media
     end
 
     def destroy
-      @photo = Photo.find(params[:id])
-      @photo.destroy
+      @medium = Medium.find(params[:id])
+      @medium.destroy
       render nothing: true
     end
 
     def photos
-      @uploads = Photo.all
+      @uploads = Medium.all
 
       respond_to do |format|
         format.json { render json: @uploads }

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kebapage (0.0.1)
+    kebapage (1.0.0)
       bootstrap-wysihtml5-rails
       dropzonejs-rails (= 0.4.12)
       friendly_id
