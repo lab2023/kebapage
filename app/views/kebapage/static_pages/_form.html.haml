@@ -1,4 +1,8 @@
-=stylesheet_link_tag 'kebapage/application'
+- content_for :head do
+  = stylesheet_link_tag 'kebapage/application', media: 'all', 'data-turbolinks-track' => true
+
+- content_for :foot do
+  = javascript_include_tag 'kebapage/application', 'data-turbolinks-track' => true
 
 .panel.panel-default
   .panel-heading
@@ -16,5 +20,3 @@
       .form-actions
         %button.btn.btn-default{type: 'submit'} #{I18n.t('kebapage.submit')}
         %a.btn{href: static_pages_path} #{I18n.t('kebapage.cancel')}
-
-=javascript_include_tag 'kebapage/application'

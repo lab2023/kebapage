@@ -1,8 +1,12 @@
-=stylesheet_link_tag 'kebapage/application'
+- content_for :head do
+  = stylesheet_link_tag 'kebapage/application', media: 'all', 'data-turbolinks-track' => true
+
+- content_for :foot do
+  = javascript_include_tag 'kebapage/application', 'data-turbolinks-track' => true
 
 .form-group
-  =simple_form_for @medium, multipart: true, html: { class: :dropzone, id: 'media-dropzone' } do |f|
-    =f.input :attachment, as: :hidden
+  = simple_form_for @medium, multipart: true, html: { class: :dropzone, id: 'media-dropzone' } do |f|
+    = f.input :attachment, as: :hidden
 
 .panel.panel-default.grid
   .panel-heading
@@ -33,5 +37,3 @@
           %td.action
             %a.btn.btn-success{href: media.attachment.url }
               %i.icon-zoom-in
-
-=javascript_include_tag 'kebapage/application'
