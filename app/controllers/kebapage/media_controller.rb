@@ -16,7 +16,13 @@ module Kebapage
     def destroy
       @medium = Medium.find(params[:id])
       @medium.destroy
-      render nothing: true
+
+      if request.xhr?
+        render nothing: true
+      else
+        redirect_to media_path
+      end
+
     end
   end
 end

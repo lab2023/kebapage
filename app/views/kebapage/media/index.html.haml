@@ -37,3 +37,5 @@
           %td.action
             %a.btn.btn-success{href: media.attachment.url }
               %i.icon-zoom-in
+            = link_to medium_path(media), method: :delete, data: { confirm: I18n.t('kebapage.ru_sure') }, class: 'btn btn-danger' do
+              %i.icon-trash
