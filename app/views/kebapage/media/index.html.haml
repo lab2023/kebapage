@@ -1,8 +1,8 @@
 =stylesheet_link_tag 'kebapage/application'
 
 .form-group
-  =form_for @medium, multipart: true, html: { class: :dropzone, id: 'media-dropzone' } do |f|
-    =f.hidden_field :attachment
+  =simple_form_for @medium, multipart: true, html: { class: :dropzone, id: 'media-dropzone' } do |f|
+    =f.input :attachment, as: :hidden
 
 .panel.panel-default.grid
   .panel-heading
@@ -27,11 +27,11 @@
           %td
             = media.attachment_content_type
           %td
-            = media.attachment_file_size.to_i / 1024
+            = "#{(media.attachment_file_size.to_i / 1024)} KB"
           %td
             = media.attachment_updated_at
           %td.action
-            %a.btn.btn-success{href: '#'}
+            %a.btn.btn-success{href: media.attachment.url }
               %i.icon-zoom-in
 
 =javascript_include_tag 'kebapage/application'
