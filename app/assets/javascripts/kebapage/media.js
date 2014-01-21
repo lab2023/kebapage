@@ -8,6 +8,7 @@ Dropzone.options.mediaDropzone = {
     addRemoveLinks: true,
     init: function () {
       return this.on('removedfile', function(file) {
+        console.log(file.xhr);
         if (file.xhr) {
           return $.ajax({
             url: "" + ($("#media-dropzone").attr("action")) + "/" + (JSON.parse(file.xhr.response).id),

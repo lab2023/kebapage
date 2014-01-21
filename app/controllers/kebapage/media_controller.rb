@@ -2,7 +2,6 @@ require_dependency 'kebapage/application_controller'
 
 module Kebapage
   class MediaController < ApplicationController
-
     def index
       @media = Medium.order('attachment_updated_at DESC')
       @medium = Medium.new
@@ -10,7 +9,7 @@ module Kebapage
 
     def create
       @medium = Medium.create(attachment: params[:attachment ])
-      render json: @media
+      render json: @medium
     end
 
     def destroy
@@ -22,7 +21,6 @@ module Kebapage
       else
         redirect_to media_path
       end
-
     end
   end
 end
