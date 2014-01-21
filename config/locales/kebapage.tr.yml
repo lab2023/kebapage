@@ -19,3 +19,4 @@ tr:
     file_type: 'Dosya Tipi'
     file_size: 'Dosya Büyüklüğü'
     upload_date: 'Yükleme Tarihi'
+    date: 'Tarih'

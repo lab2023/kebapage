@@ -6,7 +6,7 @@ module Kebapage
     skip_before_filter :authenticate_admin!, only: [:show]
 
     def index
-      @static_pages = StaticPage.all
+      @static_pages = StaticPage.order('updated_at DESC')
     end
 
     def show
