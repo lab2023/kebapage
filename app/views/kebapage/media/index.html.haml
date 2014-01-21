@@ -1,0 +1,37 @@
+=stylesheet_link_tag 'kebapage/application'
+
+.form-group
+  =form_for @medium, multipart: true, html: { class: :dropzone, id: 'media-dropzone' } do |f|
+    =f.hidden_field :attachment
+
+.panel.panel-default.grid
+  .panel-heading
+    %i.icon-table.icon-large
+    Media Manager Index Page
+
+  %table.table
+    %thead
+      %tr
+        %th #
+        %th Filetype
+        %th File size
+        %th Upload date
+        %th.actions
+          Actions
+
+    %t.body.success
+      - @media.each do |media|
+        %tr
+          %td
+            = (@media.index media) + 1
+          %td
+            = media.attachment_content_type
+          %td
+            = media.attachment_file_size.to_i / 1024
+          %td
+            = media.attachment_updated_at
+          %td.action
+            %a.btn.btn-success{href: '#'}
+              %i.icon-zoom-in
+
+=javascript_include_tag 'kebapage/application'
