@@ -18,5 +18,6 @@ tr:
     media_manager: 'Ortam Yöneticisi'
     file_type: 'Dosya Tipi'
     file_size: 'Dosya Büyüklüğü'
+    file_name: 'Dosya Adı'
     upload_date: 'Yükleme Tarihi'
     date: 'Tarih'

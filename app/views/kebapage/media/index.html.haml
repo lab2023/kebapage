@@ -17,6 +17,7 @@
     %thead
       %tr
         %th #
+        %th #{I18n.t('kebapage.file_name')}
         %th #{I18n.t('kebapage.file_type')}
         %th #{I18n.t('kebapage.file_size')}
         %th #{I18n.t('kebapage.upload_date')}
@@ -28,6 +29,8 @@
         %tr
           %td
             = (@media.index media) + 1
+          %td
+            = media.attachment_file_name
           %td
             = media.attachment_content_type
           %td
