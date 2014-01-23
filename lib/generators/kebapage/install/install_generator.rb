@@ -15,6 +15,10 @@ module Kebapage
         directory 'views', 'app/views'
       end
 
+      def copy_js
+        directory 'js', 'app/assets/javascripts'
+      end
+
       def self.next_migration_number(dirname)
         ActiveRecord::Generators::Base.next_migration_number(dirname)
       end

@@ -14,4 +14,5 @@
 //= require bootstrap-wysihtml5/core-b3
 //= require bootstrap-wysihtml5/locales/tr-TR
 //= require dropzone
+//= require kebapage/media
 //= require_tree .
