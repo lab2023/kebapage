@@ -1,0 +1,44 @@
+- content_for :head do
+  = stylesheet_link_tag 'kebapage/application', media: 'all', 'data-turbolinks-track' => true
+
+- content_for :foot do
+  = javascript_include_tag 'kebapage/application', 'data-turbolinks-track' => true
+
+.form-group
+  = simple_form_for @medium, multipart: true, html: { class: :dropzone, id: 'media-dropzone' } do |f|
+    = f.input :attachment, as: :hidden
+
+.panel.panel-default.grid
+  .panel-heading
+    %i.icon-table.icon-large
+    #{I18n.t('kebapage.media_manager')}
+
+  %table.table
+    %thead
+      %tr
+        %th #
+        %th #{I18n.t('kebapage.file_name')}
+        %th #{I18n.t('kebapage.file_type')}
+        %th #{I18n.t('kebapage.file_size')}
+        %th #{I18n.t('kebapage.upload_date')}
+        %th.actions
+          #{I18n.t('kebapage.action')}
+
+    %t.body.success
+      - @media.each do |media|
+        %tr
+          %td
+            = (@media.index media) + 1
+          %td
+            = media.attachment_file_name
+          %td
+            = media.attachment_content_type
+          %td
+            = "#{(media.attachment_file_size.to_i / 1024)} KB"
+          %td
+            = media.attachment_updated_at.to_date
+          %td.action
+            %a.btn.btn-success{href: media.attachment.url, target: '_blank' }
+              %i.icon-eye-open
+            = link_to medium_path(media), method: :delete, data: { confirm: I18n.t('kebapage.ru_sure') }, class: 'btn btn-danger' do
+              %i.icon-trash

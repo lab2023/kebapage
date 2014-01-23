@@ -2,7 +2,6 @@ require 'friendly_id'
 
 module Kebapage
   class StaticPage < ActiveRecord::Base
-    has_many :photos
     validates :title, :content, presence: true
     extend FriendlyId
     friendly_id :title, use: [:slugged, :history]

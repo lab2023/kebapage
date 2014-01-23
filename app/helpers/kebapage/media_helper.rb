@@ -1,4 +1,4 @@
 module Kebapage
-  module PhotosHelper
+  module MediaHelper
   end
 end
