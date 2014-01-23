@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'bootstrap-wysihtml5-rails', '~> 0.3.1.23'
   s.add_dependency 'dropzonejs-rails', '0.4.12'
   s.add_dependency 'simple_form', '~> 3.0.1'
+  s.add_dependency 'paperclip'
 
   s.add_development_dependency 'sqlite3', '~> 1.3.8'
 end
