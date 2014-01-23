@@ -1,7 +1,23 @@
 
 #### [Current]
+ * [73a8b4f](../../commit/73a8b4f) - __(Ahmet Sezgin Duran)__ Update example.haml
+ * [691c111](../../commit/691c111) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Move Dropzone settings to generator
+ * [a12d531](../../commit/a12d531) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Use attachment and style in url
+ * [0edc6c1](../../commit/0edc6c1) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Move paperclip settings to configs
+ * [e033910](../../commit/e033910) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Set paperclip settings
+ * [60e95a8](../../commit/60e95a8) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Remove jQuert import
+ * [cd21509](../../commit/cd21509) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Add file name field
+ * [13f8200](../../commit/13f8200) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Fix AJAX attachment remove problem
+ * [0b2d9aa](../../commit/0b2d9aa) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Check if destroy method comes by AJAX
+ * [db7e8ba](../../commit/db7e8ba) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Add date field for static pages table
+ * [81ab3ea](../../commit/81ab3ea) - __(Ahmet Sezgin Duran)__ [#6](../../issues/6) Use locales for media index page
+ * [d91ed23](../../commit/d91ed23) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Add turbolinks track
+ * [973db8f](../../commit/973db8f) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Convert forms to simple_form
+ * [27932fe](../../commit/27932fe) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Add index page with table
+ * [94a0128](../../commit/94a0128) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Refactor Photo as Media
 
-#### 
+#### 1.0.0
+ * [8be4926](../../commit/8be4926) - __(Ahmet Sezgin Duran)__ Bump version
  * [6b360f5](../../commit/6b360f5) - __(Ahmet Sezgin Duran)__ Remove unnecessary files
  * [c8d1898](../../commit/c8d1898) - __(Ahmet Sezgin Duran)__ Use layouts by configs
  * [59d50c7](../../commit/59d50c7) - __(Ahmet Sezgin Duran)__ Add show page template to generator
