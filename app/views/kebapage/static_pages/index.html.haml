@@ -8,6 +8,7 @@
       %tr
         %th #
         %th #{I18n.t('kebapage.title')}
+        %th #{I18n.t('kebapage.date')}
         %th.actions
           #{I18n.t('kebapage.action')}
     %tbody.success
@@ -17,6 +18,8 @@
             = (@static_pages.index static_page) + 1
           %td
             = static_page.title
+          %td
+            = static_page.updated_at.to_date
           %td.action
             %a.btn.btn-success{href: main_app.pages_path(static_page), data: { toggle: 'tooltip'}, title: I18n.t('kebapage.show')}
               %i.icon-zoom-in

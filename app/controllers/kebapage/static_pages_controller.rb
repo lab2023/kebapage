@@ -1,4 +1,4 @@
-require_dependency "kebapage/application_controller"
+require_dependency 'kebapage/application_controller'
 
 module Kebapage
   class StaticPagesController < ApplicationController
@@ -6,7 +6,7 @@ module Kebapage
     skip_before_filter :authenticate_admin!, only: [:show]
 
     def index
-      @static_pages = StaticPage.all
+      @static_pages = StaticPage.order('updated_at DESC')
     end
 
     def show
@@ -19,11 +19,11 @@ module Kebapage
 
     def new
       @static_page = StaticPage.new
-      @photo = Photo.new
+      @medium = Medium.new
     end
 
     def edit
-      @photo = Photo.new
+      @medium = Medium.new
     end
 
     def create

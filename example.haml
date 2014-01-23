@@ -24,8 +24,14 @@
   %li.launcher
     %i.icon-bookmark
     %a{href: '#'} Bookmarks
-  %li.launcher
-    %i.icon-pencil
+  %li.launcher.dropdown.hover
+    %i.icon-bookmark
     %a{href: '/hq/spm'} Static Pages
+    %ul.dropdown-menu
+      %li.dropdown-header Content
+      %li
+        %a{href: '/hq/spm/static_pages'} Static Pages
+      %li
+        %a{href: '/hq/spm/media'} Media Manager
 
 #beaker{data: {toggle: 'tooltip'}, title: 'Made by lab2023'}

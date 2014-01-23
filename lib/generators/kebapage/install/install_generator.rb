@@ -15,13 +15,17 @@ module Kebapage
         directory 'views', 'app/views'
       end
 
+      def copy_js
+        directory 'js', 'app/assets/javascripts'
+      end
+
       def self.next_migration_number(dirname)
         ActiveRecord::Generators::Base.next_migration_number(dirname)
       end
 
       def create_migration_file
         migration_template 'migrations/static_pages.rb', 'db/migrate/create_kebapage_static_pages.rb' rescue nil
-        migration_template 'migrations/photos.rb', 'db/migrate/create_kebapage_photos.rb' rescue nil
+        migration_template 'migrations/media.rb', 'db/migrate/create_kebapage_media.rb' rescue nil
         migration_template 'migrations/add_slug_to_kebapage_static_pages.rb', 'db/migrate/add_slug_to_kebapage_static_pages.rb' rescue nil
         migration_template 'migrations/friendly_id_slugs.rb', 'db/migrate/create_friendly_id_slugs.rb' rescue nil
       end
