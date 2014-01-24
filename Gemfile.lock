@@ -1,17 +1,15 @@
 PATH
   remote: .
   specs:
-    kebapage (1.0.0)
+    kebapage (1.1.0)
       bootstrap-wysihtml5-rails (~> 0.3.1.23)
       dropzonejs-rails (= 0.4.12)
-      friendly_id (~> 5.0.2)
       haml (~> 4.0.2)
       haml-rails (~> 0.5.3)
       i18n (~> 0.6.9)
       paperclip
       rails (~> 4.0.2)
       rails-i18n (~> 4.0.1)
-      simple_form (~> 3.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -52,8 +50,6 @@ GEM
     dropzonejs-rails (0.4.12)
       rails (> 3.1)
     erubis (2.7.0)
-    friendly_id (5.0.2)
-      activerecord (~> 4.0.0)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -95,9 +91,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.1)
-    simple_form (3.0.1)
-      actionpack (>= 4.0.0, < 4.1)
-      activemodel (>= 4.0.0, < 4.1)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
