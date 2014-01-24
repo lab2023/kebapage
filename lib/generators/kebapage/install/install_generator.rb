@@ -26,8 +26,6 @@ module Kebapage
       def create_migration_file
         migration_template 'migrations/static_pages.rb', 'db/migrate/create_kebapage_static_pages.rb' rescue nil
         migration_template 'migrations/media.rb', 'db/migrate/create_kebapage_media.rb' rescue nil
-        migration_template 'migrations/add_slug_to_kebapage_static_pages.rb', 'db/migrate/add_slug_to_kebapage_static_pages.rb' rescue nil
-        migration_template 'migrations/friendly_id_slugs.rb', 'db/migrate/create_friendly_id_slugs.rb' rescue nil
       end
 
       def copy_locales
