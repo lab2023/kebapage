@@ -1,5 +1,11 @@
 
 #### [Current]
+ * [c88deff](../../commit/c88deff) - __(Ahmet Sezgin Duran)__ Update gemspec and remove simple_form template
+ * [298c0ee](../../commit/298c0ee) - __(Ahmet Sezgin Duran)__ Remove friendy_id and use standart named routing
+ * [e058cce](../../commit/e058cce) - __(Ahmet Sezgin Duran)__ Remove simple_form files
+
+#### 1.1.0
+ * [df659b6](../../commit/df659b6) - __(Ahmet Sezgin Duran)__ Bump version
  * [73a8b4f](../../commit/73a8b4f) - __(Ahmet Sezgin Duran)__ Update example.haml
  * [691c111](../../commit/691c111) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Move Dropzone settings to generator
  * [a12d531](../../commit/a12d531) - __(Ahmet Sezgin Duran)__ [#5](../../issues/5) Use attachment and style in url
