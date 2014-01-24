@@ -10,11 +10,7 @@ module Kebapage
     end
 
     def show
-      if request.path != main_app.pages_path(@static_page)
-        redirect_to main_app.pages_path(@static_page), status: :moved_permanently
-      else
-        render layout: Rails.configuration.kebapage.front_layout, template: 'kebapage/show'
-      end
+      render layout: Rails.configuration.kebapage.front_layout, template: 'kebapage/show'
     end
 
     def new
@@ -51,7 +47,7 @@ module Kebapage
 
     private
       def set_static_page
-        @static_page = StaticPage.friendly.find(params[:id])
+        @static_page = StaticPage.find(params[:id])
       end
 
       def static_page_params

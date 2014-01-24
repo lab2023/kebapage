@@ -20,11 +20,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails-i18n', '~> 4.0.1'
   s.add_dependency 'i18n', '~> 0.6.9'
   s.add_dependency 'haml-rails', '~> 0.5.3'
-  s.add_dependency 'friendly_id', '~> 5.0.2'
   s.add_dependency 'bootstrap-wysihtml5-rails', '~> 0.3.1.23'
-  s.add_dependency 'dropzonejs-rails', '0.4.12'
-  s.add_dependency 'simple_form', '~> 3.0.1'
-  s.add_dependency 'paperclip'
+  s.add_dependency 'dropzonejs-rails', '~> 0.4.12'
+  s.add_dependency 'paperclip', '~> 3.5.2'
 
   s.add_development_dependency 'sqlite3', '~> 1.3.8'
 end
