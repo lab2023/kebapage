@@ -50,7 +50,7 @@ Add blog icon-link to Cybele Rails application's **app/views/layouts/hq/partials
 
 If you discover any bugs or want to drop a line, feel free to create an issue on Github
 
-http://github.com/kebab-project/kebapage
+http://github.com/lab2023/kebapage/issues
 
 ## Contributing
 
@@ -67,6 +67,7 @@ Once you've made your great commits:
 ![lab2023](http://lab2023.com/assets/images/named-logo.png)
 
 - Kebapage is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
+- Thank you to all the [contributors!](../../graphs/contributors)
 - The names and logos for lab2023 are trademarks of lab2023, inc.
 
 ## License
